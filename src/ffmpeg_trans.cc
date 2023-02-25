@@ -1,16 +1,19 @@
 #include "ffmpeg_trans.h"
 
-int ffmpeg_trans_create(handle* p)
+int ffmpeg_trans_create(HANDLE *p)
 {
-
+    int ret = FFMPEG_OK;
+    return ret;
 }
 
-int ffmpeg_trans_destroy(handle h)
+int ffmpeg_trans_destroy(HANDLE h)
 {
-
+    int ret = FFMPEG_OK;
+    return ret;
 }
 
-int ffmpeg_trans_setcallback(ffmpeg_trans_callback_type callback, void* user)
+int ffmpeg_trans_setcallback(HANDLE h, ffmpeg_trans_callback_type type, ffmpeg_trans_callback callback, void *user)
 {
-    
+    int ret = FFMPEG_OK;
+    return ret;
 }

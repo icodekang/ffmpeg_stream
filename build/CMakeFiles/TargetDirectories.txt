@@ -1,0 +1,15 @@
+/root/code/ffmpeg/build/CMakeFiles/ffmpeg_stream.dir
+/root/code/ffmpeg/build/CMakeFiles/edit_cache.dir
+/root/code/ffmpeg/build/CMakeFiles/rebuild_cache.dir
+/root/code/ffmpeg/build/CMakeFiles/list_install_components.dir
+/root/code/ffmpeg/build/CMakeFiles/install.dir
+/root/code/ffmpeg/build/CMakeFiles/install/local.dir
+/root/code/ffmpeg/build/CMakeFiles/install/strip.dir
+/root/code/ffmpeg/build/example/CMakeFiles/rtsp_stream.dir
+/root/code/ffmpeg/build/example/CMakeFiles/tran_stream.dir
+/root/code/ffmpeg/build/example/CMakeFiles/edit_cache.dir
+/root/code/ffmpeg/build/example/CMakeFiles/rebuild_cache.dir
+/root/code/ffmpeg/build/example/CMakeFiles/list_install_components.dir
+/root/code/ffmpeg/build/example/CMakeFiles/install.dir
+/root/code/ffmpeg/build/example/CMakeFiles/install/local.dir
+/root/code/ffmpeg/build/example/CMakeFiles/install/strip.dir

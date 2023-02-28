@@ -6,8 +6,9 @@
 
 static void auto_stream_thread(void *user) {
     int ret = FFMPEG_OK;
+    int video_stream = -1, audio_stream = -1;
     FFmpegCore *core = nullptr;
-    AVPacket   *pkg = nullptr;
+    AVPacket   *pkg  = nullptr;
     ffmpeg_core_context *ctx = nullptr;
     
     if (nullptr == user) {
@@ -24,6 +25,24 @@ static void auto_stream_thread(void *user) {
     ctx = (ffmpeg_core_context*)user;
     if (nullptr == ctx || nullptr == ctx->ifmt_ctx) {
         spdlog::error("param error, ctx={}", (void*)ctx);
+        goto fail;
+    }
+
+    ret = avformat_find_stream_info(ctx->ifmt_ctx, nullptr);
+    if (ret < 0) {
+        spdlog::error("can't find video stream in input stream, ret={}", ret);
+        goto fail;
+    }
+
+    video_stream = av_find_best_stream(ctx->ifmt_ctx, AVMEDIA_TYPE_VIDEO, -1, -1, nullptr, 0);
+    if (video_stream < 0) {
+        spdlog::error("can't find video stream in input stream");
+        goto fail;
+    }
+
+    audio_stream = av_find_best_stream(ctx->ifmt_ctx, AVMEDIA_TYPE_AUDIO, -1, -1, nullptr, 0);
+    if (video_stream < 0) {
+        spdlog::error("can't find video stream in input stream");
         goto fail;
     }
 
